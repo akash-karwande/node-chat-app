@@ -4,16 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
-    <h2>Hello there!!</h2>
+<body class="chat">
+   <div class="chat__sidebar">
+       <h3>People</h3>
+       <div id="users"></div>
+   </div>
 
-    <ol id="msg"></ol>
+   <div class="chat__main">
+    <ol id="msg" class="chat__messages"></ol>
 
-    <form id="message-form">
-        <input type="text" name="message" id="message" placeholder="Message">
-        <button type="submit">Send</button>
-    </form>
+    <div class="chat__footer">
+
+        <form id="message-form">
+            <input type="text" name="message" id="message" placeholder="Message" autofocus autocomplete="off">
+            <button type="submit">Send</button>
+        </form>
+        <button id="send-location">Send Location</button>
+
+    </div>
+
+   </div>
+
+    
 
     <script src="socket.io/socket.io.js"></script>
     <script src="/js/libs/jquery-3.5.1.min.js"></script>
