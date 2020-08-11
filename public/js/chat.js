@@ -69,7 +69,6 @@ var socket = io();
             e.preventDefault();
 
             socket.emit('createMessage', {
-                from:'akash',
                 text: $('#message').val()
         }, function() {
             $('#message').val('');
